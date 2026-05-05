@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Yash Tayade",
+    "designation": "Software Engineer",
+    "department": "IT",
+    "salary": 50000,
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "name": "Rohit Sharma",
+    "designation": "HR Manager",
+    "department": "HR",
+    "salary": 60000,
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "name": "Sneha Patil",
+    "designation": "UI Designer",
+    "department": "Design",
+    "salary": 45000,
+    "image": "https://via.placeholder.com/150"
+  }
+]

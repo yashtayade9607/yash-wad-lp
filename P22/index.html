@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PICT Mobile Website</title>
+
+    <!-- jQuery Mobile CDN -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+
+<body>
+
+<!-- ================= HOME PAGE ================= -->
+<div data-role="page" id="Home">
+
+    <!-- HEADER -->
+    <div data-role="header">
+        <h1>PICT Pune</h1>
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#Home" class="ui-btn-active" data-icon="home">Home</a></li>
+                <li><a href="#Course" data-icon="grid" data-transition="slide">Course</a></li>
+                <li><a href="#Department" data-icon="bars" data-transition="pop">Department</a></li>
+                <li><a href="#About" data-icon="info" data-transition="flip">About</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div role="main" class="ui-content">
+        <h2>Established in 1983</h2>
+        <p>Pune Institute of Computer Technology is one of the top engineering colleges.</p>
+    </div>
+
+    <!-- FOOTER -->
+    <div data-role="footer" data-position="fixed">
+        <h4>© 2026 PICT Pune</h4>
+    </div>
+
+</div>
+
+<!-- ================= COURSE PAGE ================= -->
+<div data-role="page" id="Course">
+
+    <div data-role="header">
+        <h1>Courses Offered</h1>
+        <a href="#Home" data-icon="back">Back</a>
+    </div>
+
+    <div role="main" class="ui-content">
+        <ul data-role="listview">
+            <li>Information Technology</li>
+            <li>Computer Engineering</li>
+            <li>Artificial Intelligence</li>
+        </ul>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h4>Courses @ PICT</h4>
+    </div>
+
+</div>
+
+<!-- ================= DEPARTMENT PAGE ================= -->
+<div data-role="page" id="Department">
+
+    <div data-role="header">
+        <h1>Departments</h1>
+        <a href="#Home" data-icon="back">Back</a>
+    </div>
+
+    <div role="main" class="ui-content">
+
+        <div data-role="collapsible-set">
+
+            <div data-role="collapsible">
+                <h3>Computer Engineering</h3>
+                <p>Focus on software and AI.</p>
+            </div>
+
+            <div data-role="collapsible">
+                <h3>Information Technology</h3>
+                <p>Focus on networking and data systems.</p>
+            </div>
+
+            <div data-role="collapsible">
+                <h3>Electronics Engineering</h3>
+                <p>Focus on communication systems.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h4>Departments @ PICT</h4>
+    </div>
+
+</div>
+
+<!-- ================= ABOUT PAGE ================= -->
+<div data-role="page" id="About">
+
+    <div data-role="header">
+        <h1>About</h1>
+        <a href="#Home" data-icon="back">Back</a>
+    </div>
+
+    <div role="main" class="ui-content">
+        <h3>Address</h3>
+        <p>Survey No. 27, Pune - 411043</p>
+
+        <h3>Contact</h3>
+        <p>Phone: +91-20-24371101</p>
+        <p>Email: info@pict.edu</p>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h4>About PICT</h4>
+    </div>
+
+</div>
+
+</body>
+</html>

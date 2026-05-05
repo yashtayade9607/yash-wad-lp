@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "n1",
+        "price": "₹4000",
+        "image": "https://picsum.photos/seed/nature/800/600"
+    },
+    {
+        "id": 2,
+        "name": "n2",
+        "price": "₹2000",
+        "image": "https://picsum.photos/seed/electric/800/600"
+    },
+    {
+        "id": 3,
+        "name": "n3",
+        "price": "₹5000",
+        "image": "https://picsum.photos/seed/water/800/600"
+    },
+    {
+        "id": 4,
+        "name": "n4",
+        "price": "₹1000",
+        "image": "https://picsum.photos/seed/winter/800/600"
+    }
+]

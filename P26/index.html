@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PICT Course Structure</title>
+
+    <!-- jQuery Mobile CDN -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <style>
+        .subject {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= HOME PAGE ================= -->
+<div data-role="page" id="home">
+
+    <div data-role="header">
+        <h1>PICT B.E. Course</h1>
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" class="ui-btn-active" data-icon="home">Home</a></li>
+                <li><a href="#course" data-icon="grid" data-transition="slide">Structure</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div role="main" class="ui-content">
+        <h2>B.E. Course Structure</h2>
+        <p>Explore subjects year-wise for FE, SE, TE, and BE.</p>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h4>© PICT Pune</h4>
+    </div>
+
+</div>
+
+<!-- ================= COURSE PAGE ================= -->
+<div data-role="page" id="course">
+
+    <div data-role="header">
+        <h1>Course Structure</h1>
+        <a href="#home" data-icon="back">Back</a>
+    </div>
+
+    <div role="main" class="ui-content">
+
+        <div data-role="collapsible-set">
+
+            <!-- FE -->
+            <div data-role="collapsible">
+                <h3>First Year (FE)</h3>
+
+                <div class="subject">
+                    <b>Engineering Mathematics</b>
+                    <p>Basic calculus and algebra.</p>
+                </div>
+
+                <div class="subject">
+                    <b>Physics</b>
+                    <p>Fundamentals of mechanics and waves.</p>
+                </div>
+
+                <div class="subject">
+                    <b>Basic Electrical</b>
+                    <p>Introduction to circuits and systems.</p>
+                </div>
+
+            </div>
+
+            <!-- SE -->
+            <div data-role="collapsible">
+                <h3>Second Year (SE)</h3>
+
+                <div class="subject">
+                    <b>Data Structures</b>
+                    <p>Arrays, stacks, queues, trees.</p>
+                </div>
+
+                <div class="subject">
+                    <b>Computer Networks</b>
+                    <p>Networking concepts and protocols.</p>
+                </div>
+
+                <div class="subject">
+                    <b>Database Management</b>
+                    <p>SQL and database design.</p>
+                </div>
+
+            </div>
+
+            <!-- TE -->
+            <div data-role="collapsible">
+                <h3>Third Year (TE)</h3>
+
+                <div class="subject">
+                    <b>Operating Systems</b>
+                    <p>Process management and memory handling.</p>
+                </div>
+
+                <div class="subject">
+                    <b>Web Development</b>
+                    <p>Frontend and backend technologies.</p>
+                </div>
+
+                <div class="subject">
+                    <b>Software Engineering</b>
+                    <p>Software development lifecycle.</p>
+                </div>
+
+            </div>
+
+            <!-- BE -->
+            <div data-role="collapsible">
+                <h3>Final Year (BE)</h3>
+
+                <div class="subject">
+                    <b>Machine Learning</b>
+                    <p>Algorithms for intelligent systems.</p>
+                </div>
+
+                <div class="subject">
+                    <b>Cloud Computing</b>
+                    <p>Cloud services and deployment.</p>
+                </div>
+
+                <div class="subject">
+                    <b>Project Work</b>
+                    <p>Major project implementation.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h4>Course Structure</h4>
+    </div>
+
+</div>
+
+</body>
+</html>

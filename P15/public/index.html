@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+
+<body>
+
+    <div class="result">
+        <ul class="product-list"></ul>
+    </div>
+
+    <script>
+
+        async function fetchData() {
+
+            try {
+                let response = await fetch("/api/products");
+                let data = await response.json();
+
+                console.log(data);
+
+                let ul = document.querySelector(".product-list");
+
+                data.forEach(function (item) {
+
+                    let li = document.createElement("li");
+
+                    li.innerHTML = `
+                        ID: ${item.id} <br>
+                        Name: ${item.name} <br>
+                        Price: ${item.price} <br>
+                        Image: ${item.image}
+                        <hr>
+                    `;
+
+                    ul.appendChild(li);
+
+                });
+
+            } catch (error) {
+
+                console.log("Error:", error);
+
+            }
+
+        }
+
+        fetchData();
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+body {
+    font-family: Arial;
+    text-align: center;
+}
+
+#employees {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}

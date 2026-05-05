@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Reviews</title>
+
+    <!-- jQuery Mobile CDN -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <style>
+        .movie-card {
+            background: #fff;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+        }
+
+        .movie-img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .movie-card h3 {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= HOME PAGE ================= -->
+<div data-role="page" id="home">
+
+    <div data-role="header">
+        <h1>Movie Reviews</h1>
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" class="ui-btn-active" data-icon="home">Home</a></li>
+                <li><a href="#movies" data-icon="grid" data-transition="slide">Movies</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div role="main" class="ui-content">
+        <h2>Top Movie Reviews</h2>
+        <p>Explore reviews of popular movies.</p>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h4>© Movie Review App</h4>
+    </div>
+
+</div>
+
+<!-- ================= MOVIES PAGE ================= -->
+<div data-role="page" id="movies">
+
+    <div data-role="header">
+        <h1>Movies</h1>
+        <a href="#home" data-icon="back">Back</a>
+    </div>
+
+    <div role="main" class="ui-content">
+
+        <!-- Movie 1 -->
+        <div class="movie-card">
+            <img src="https://via.placeholder.com/300x400" class="movie-img">
+
+            <h3>Inception</h3>
+            <p><b>Genre:</b> Sci-Fi, Thriller</p>
+            <p><b>Summary:</b> A thief enters dreams to steal secrets.</p>
+            <p><b>Review:</b> Mind-blowing concept with excellent visuals.</p>
+        </div>
+
+        <!-- Movie 2 -->
+        <div class="movie-card">
+            <img src="https://via.placeholder.com/300x400" class="movie-img">
+
+            <h3>3 Idiots</h3>
+            <p><b>Genre:</b> Comedy, Drama</p>
+            <p><b>Summary:</b> Story of engineering students and life lessons.</p>
+            <p><b>Review:</b> Inspiring and emotional with strong message.</p>
+        </div>
+
+        <!-- Movie 3 -->
+        <div class="movie-card">
+            <img src="https://via.placeholder.com/300x400" class="movie-img">
+
+            <h3>Avengers: Endgame</h3>
+            <p><b>Genre:</b> Action, Superhero</p>
+            <p><b>Summary:</b> Avengers fight to save the universe.</p>
+            <p><b>Review:</b> Epic conclusion with amazing action scenes.</p>
+        </div>
+
+        <!-- Movie 4 -->
+        <div class="movie-card">
+            <img src="https://via.placeholder.com/300x400" class="movie-img">
+
+            <h3>KGF</h3>
+            <p><b>Genre:</b> Action</p>
+            <p><b>Summary:</b> Rise of a powerful man in gold mafia world.</p>
+            <p><b>Review:</b> Powerful storytelling and strong background music.</p>
+        </div>
+
+        <!-- Movie 5 -->
+        <div class="movie-card">
+            <img src="https://via.placeholder.com/300x400" class="movie-img">
+
+            <h3>Interstellar</h3>
+            <p><b>Genre:</b> Sci-Fi</p>
+            <p><b>Summary:</b> Space travel to save humanity.</p>
+            <p><b>Review:</b> Emotional and scientifically rich masterpiece.</p>
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h4>Enjoy Movies 🎬</h4>
+    </div>
+
+</div>
+
+</body>
+</html>

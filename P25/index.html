@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+
+    <!-- jQuery Mobile CDN -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <style>
+        .profile-img {
+            width: 120px;
+            border-radius: 50%;
+            display: block;
+            margin: auto;
+        }
+
+        .card {
+            background: #fff;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= HOME ================= -->
+<div data-role="page" id="home">
+
+    <div data-role="header">
+        <h1>My Portfolio</h1>
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" class="ui-btn-active" data-icon="home">Home</a></li>
+                <li><a href="#about" data-icon="user" data-transition="slide">About</a></li>
+                <li><a href="#projects" data-icon="grid" data-transition="slide">Projects</a></li>
+                <li><a href="#skills" data-icon="star" data-transition="slide">Skills</a></li>
+                <li><a href="#contact" data-icon="phone" data-transition="slide">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div role="main" class="ui-content">
+        <img src="https://via.placeholder.com/120" class="profile-img">
+        <h2 style="text-align:center;">Samarth Chaugule</h2>
+        <p style="text-align:center;">IT Student | Aspiring Software Developer</p>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h4>© 2026 My Portfolio</h4>
+    </div>
+
+</div>
+
+<!-- ================= ABOUT ================= -->
+<div data-role="page" id="about">
+
+    <div data-role="header">
+        <h1>About Me</h1>
+        <a href="#home" data-icon="back">Back</a>
+    </div>
+
+    <div role="main" class="ui-content">
+        <p>
+            I am <b>Samarth Chaugule</b>, a second-year Information Technology student with a strong interest in 
+            <b>Data Structures & Algorithms</b> and <b>Web Development</b>.
+        </p>
+
+        <p>
+            I have solved multiple problems on coding platforms like LeetCode and CodeChef, which helps me improve 
+            my logical thinking and problem-solving skills.
+        </p>
+
+        <p>
+            I also build web applications using HTML, CSS, JavaScript, and backend technologies like Node.js and MongoDB.
+        </p>
+
+        <p>
+            My goal is to become a skilled software engineer and secure a placement in a top product-based company.
+        </p>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h4>About Me</h4>
+    </div>
+
+</div>
+
+<!-- ================= PROJECTS ================= -->
+<div data-role="page" id="projects">
+
+    <div data-role="header">
+        <h1>Projects</h1>
+        <a href="#home" data-icon="back">Back</a>
+    </div>
+
+    <div role="main" class="ui-content">
+
+        <div class="card">
+            <h3>Forum System</h3>
+            <p>
+                Developed a full-stack discussion platform using PHP and MySQL where users can create posts, 
+                comment, and interact. Implemented authentication and admin features.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Alumni Connect</h3>
+            <p>
+                Built a platform to connect alumni with students for mentorship and networking. 
+                Focused on database design and user-friendly interface.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Weather App</h3>
+            <p>
+                Created a responsive weather app using JavaScript and API integration to fetch real-time data 
+                like temperature and humidity.
+            </p>
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h4>My Projects</h4>
+    </div>
+
+</div>
+
+<!-- ================= SKILLS ================= -->
+<div data-role="page" id="skills">
+
+    <div data-role="header">
+        <h1>Skills</h1>
+        <a href="#home" data-icon="back">Back</a>
+    </div>
+
+    <div role="main" class="ui-content">
+
+        <ul data-role="listview">
+
+            <li><b>Programming:</b> Java (Basics), Problem Solving</li>
+
+            <li><b>Core Skills:</b> Data Structures & Algorithms</li>
+
+            <li><b>Web Development:</b> HTML, CSS, JavaScript, Bootstrap</li>
+
+            <li><b>Backend:</b> Node.js, Express.js</li>
+
+            <li><b>Database:</b> MySQL, MongoDB</li>
+
+            <li><b>Tools:</b> Git, VS Code</li>
+
+        </ul>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h4>My Skills</h4>
+    </div>
+
+</div>
+
+<!-- ================= CONTACT ================= -->
+<div data-role="page" id="contact">
+
+    <div data-role="header">
+        <h1>Contact Info</h1>
+        <a href="#home" data-icon="back">Back</a>
+    </div>
+
+    <div role="main" class="ui-content">
+        <p><b>Email:</b> samarth@example.com</p>
+        <p><b>Phone:</b> +91-XXXXXXXXXX</p>
+        <p><b>Location:</b> Pune, India</p>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h4>Contact Me</h4>
+    </div>
+
+</div>
+
+</body>
+</html>

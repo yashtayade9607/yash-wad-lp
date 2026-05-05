@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Commerce Product Listing</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    .product-card {
+        transition: transform 0.2s ease;
+    }
+
+    .product-card:hover {
+        transform: scale(1.03);
+    }
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">E-Shop</span>
+
+        <!-- Dropdown Filter -->
+        <div class="dropdown">
+            <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                Filter Category
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#" onclick="filterProducts('all')">All</a></li>
+                <li><a class="dropdown-item" href="#" onclick="filterProducts('electronics')">Electronics</a></li>
+                <li><a class="dropdown-item" href="#" onclick="filterProducts('fashion')">Fashion</a></li>
+                <li><a class="dropdown-item" href="#" onclick="filterProducts('home')">Home</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Product Grid -->
+<div class="container mt-4">
+    <div class="row" id="productContainer">
+
+        <!-- Product 1 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4 product" data-category="electronics">
+            <div class="card product-card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Smartphone</h5>
+                    <p class="card-text">High performance mobile device.</p>
+                    <p class="fw-bold">₹15,000</p>
+                    <button class="btn btn-primary w-100">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4 product" data-category="fashion">
+            <div class="card product-card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">T-Shirt</h5>
+                    <p class="card-text">Comfortable cotton wear.</p>
+                    <p class="fw-bold">₹800</p>
+                    <button class="btn btn-primary w-100">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4 product" data-category="home">
+            <div class="card product-card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Blender</h5>
+                    <p class="card-text">Perfect for smoothies.</p>
+                    <p class="fw-bold">₹2,500</p>
+                    <button class="btn btn-primary w-100">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4 product" data-category="electronics">
+            <div class="card product-card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Headphones</h5>
+                    <p class="card-text">Noise cancelling audio.</p>
+                    <p class="fw-bold">₹3,000</p>
+                    <button class="btn btn-primary w-100">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4 product" data-category="fashion">
+            <div class="card product-card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Jeans</h5>
+                    <p class="card-text">Stylish denim wear.</p>
+                    <p class="fw-bold">₹1,500</p>
+                    <button class="btn btn-primary w-100">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4 product" data-category="home">
+            <div class="card product-card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Chair</h5>
+                    <p class="card-text">Ergonomic office chair.</p>
+                    <p class="fw-bold">₹4,000</p>
+                    <button class="btn btn-primary w-100">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+function filterProducts(category) {
+    const products = document.querySelectorAll('.product');
+
+    products.forEach(product => {
+        if (category === 'all' || product.dataset.category === category) {
+            product.style.display = 'block';
+        } else {
+            product.style.display = 'none';
+        }
+    });
+}
+</script>
+
+</body>
+</html>

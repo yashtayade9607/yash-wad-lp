@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        .pagination {
+            margin-top: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Product Image</th>
+                    <th>Product Name</th>
+                    <th>Price (₹)</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="pagination">
+        <button id="prev">prev</button>
+        <button>1</button>
+        <button id="next">next</button>
+    </div>
+
+</body>
+
+<script>
+    let products = [
+        {
+            img: "https://via.placeholder.com/100",
+            name: "Wireless Headphones",
+            price: "₹7,999",
+            desc: "Noise-cancelling over-ear headphones.",
+        },
+        {
+            img: "https://via.placeholder.com/100",
+            name: "Wireless Headphones",
+            price: "₹7,999",
+            desc: "Noise-cancelling over-ear headphones.",
+        },
+        {
+            img: "https://via.placeholder.com/100",
+            name: "Wireless Headphones",
+            price: "₹7,999",
+            desc: "Noise-cancelling over-ear headphones.",
+        },
+        {
+            img: "https://via.placeholder.com/100",
+            name: "Wireless Headphones",
+            price: "₹7,999",
+            desc: "Noise-cancelling over-ear headphones.",
+        },
+        {
+            img: "https://via.placeholder.com/100",
+            name: "Wireless Headphones",
+            price: "₹7,999",
+            desc: "Noise-cancelling over-ear headphones.",
+        },
+        {
+            img: "https://via.placeholder.com/100",
+            name: "Wireless Headphones",
+            price: "₹7,999",
+            desc: "Noise-cancelling over-ear headphones.",
+        },
+        {
+            img: "https://via.placeholder.com/100",
+            name: "Wireless Headphones",
+            price: "₹7,999",
+            desc: "Noise-cancelling over-ear headphones.",
+        },
+        {
+            img: "https://via.placeholder.com/100",
+            name: "Wireless Headphones",
+            price: "₹7,999",
+            desc: "Noise-cancelling over-ear headphones.",
+        },
+        {
+            img: "https://via.placeholder.com/100",
+            name: "Wireless Headphones",
+            price: "₹7,999",
+            desc: "Noise-cancelling over-ear headphones.",
+        },
+        {
+            img: "https://via.placeholder.com/100",
+            name: "Wireless Headphones",
+            price: "₹7,999",
+            desc: "Noise-cancelling over-ear headphones.",
+        },
+        {
+            img: "https://via.placeholder.com/100",
+            name: "Wireless Headphones",
+            price: "₹7,999",
+            desc: "Noise-cancelling over-ear headphones.",
+        },
+        {
+            img: "https://via.placeholder.com/100",
+            name: "Wireless Headphones",
+            price: "₹7,999",
+            desc: "Noise-cancelling over-ear headphones.",
+        },
+        {
+            img: "https://via.placeholder.com/100",
+            name: "Wireless Headphones",
+            price: "₹7,999",
+            desc: "Noise-cancelling over-ear headphones.",
+        },
+        {
+            img: "https://via.placeholder.com/100",
+            name: "Wireless Headphones",
+            price: "₹7,999",
+            desc: "Noise-cancelling over-ear headphones.",
+        },
+        {
+            img: "https://via.placeholder.com/100",
+            name: "Wireless Headphones",
+            price: "₹7,999",
+            desc: "Noise-cancelling over-ear headphones.",
+        },
+        {
+            img: "https://via.placeholder.com/100",
+            name: "Wireless Headphones",
+            price: "₹7,999",
+            desc: "Noise-cancelling over-ear headphones.",
+        },
+        {
+            img: "https://via.placeholder.com/100",
+            name: "Wireless Headphones",
+            price: "₹7,999",
+            desc: "Noise-cancelling over-ear headphones.",
+        },
+        {
+            img: "https://via.placeholder.com/100",
+            name: "Wireless Headphones",
+            price: "₹7,999",
+            desc: "Noise-cancelling over-ear headphones.",
+        },
+        {
+            img: "https://via.placeholder.com/100",
+            name: "Wireless Headphones",
+            price: "₹7,999",
+            desc: "Noise-cancelling over-ear headphones.",
+        },
+        {
+            img: "https://via.placeholder.com/100",
+            name: "Wireless Headphones",
+            price: "₹7,999",
+            desc: "Noise-cancelling over-ear headphones.",
+        },
+    ]
+
+    let count = 0;
+    function displayProducts(page) {
+        let pagination = document.querySelector(".pagination");
+        // pagination.innerHTML = page;
+
+
+        let start = (page - 1) * 10;
+        let end = start + 10;
+
+        console.log("page : ", page);
+        console.log("start : ", start);
+        console.log("end : ", end);
+        console.log("count : ", count);
+
+        let paginatedItems = products.slice(start, end);
+        let tbody = document.querySelector('tbody');
+        tbody.innerHTML = "";
+        paginatedItems.forEach(products => {
+            let row = `
+            <tr>
+                <td>${++count}</td>
+                <td><img src="${products.img}" alt="${products.name}"></td>
+                <td>${products.name}</td>
+                <td>${products.price}</td>
+                <td>${products.desc}</td>
+            </tr>
+            `;
+            tbody.innerHTML += row;
+        });
+    }
+
+    displayProducts(1);
+
+    let page = 1;
+
+    document.getElementById("next").addEventListener("click", () => {
+        displayProducts(++page);
+    })
+
+    document.getElementById("prev").addEventListener("click", () => {
+        displayProducts(--page);
+    })
+</script>
+
+</html>

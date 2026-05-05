@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background: #f4f4f4;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        nav {
+            background: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #00bcd4;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+            border-bottom: 2px solid #00bcd4;
+            display: inline-block;
+        }
+
+        .about p {
+            font-size: 18px;
+        }
+
+        .skills ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+        }
+
+        .skills li {
+            background: #00bcd4;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+        }
+
+        .projects .card {
+            background: #fafafa;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 5px solid #00bcd4;
+        }
+
+        .education table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .education th,
+        .education td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .education th {
+            background: #333;
+            color: white;
+        }
+
+        .contact p {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .skills ul {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Your Name</h1>
+        <p>Web Developer | Student | Tech Enthusiast</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>
+            I am a passionate developer interested in building web applications.
+            I enjoy solving problems and learning new technologies.
+        </p>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Node.js</li>
+        </ul>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+
+        <div class="card">
+            <h3>Project 1</h3>
+            <p>Product catalog webpage with pagination.</p>
+        </div>
+
+        <div class="card">
+            <h3>Project 2</h3>
+            <p>Client-server video streaming system.</p>
+        </div>
+
+    </section>
+
+    <section id="education" class="education">
+        <h2>Education</h2>
+
+        <table>
+            <tr>
+                <th>Degree</th>
+                <th>Institute</th>
+                <th>Year</th>
+            </tr>
+            <tr>
+                <td>Bachelor of Engineering</td>
+                <td>Your College Name</td>
+                <td>2022 - 2026</td>
+            </tr>
+        </table>
+
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>Email: your@email.com</p>
+        <p>Phone: +91 XXXXX XXXXX</p>
+        <p>LinkedIn: linkedin.com/in/yourprofile</p>
+    </section>
+
+    <footer>
+        <p>© 2026 Your Name | All Rights Reserved</p>
+    </footer>
+
+</body>
+
+</html>

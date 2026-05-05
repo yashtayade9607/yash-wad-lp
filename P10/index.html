@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>To-Do App</title>
+    <style>
+        body {
+            font-family: Arial;
+            max-width: 500px;
+            margin: 40px auto;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        button {
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>To-Do List</h2>
+
+    <input type="text" id="taskInput" placeholder="Enter task">
+    <button onclick="addTask()">Add</button>
+
+    <ul id="taskList"></ul>
+
+    <script>
+        const api = "http://localhost:3000/tasks";
+
+        window.onload = loadTasks;
+
+        function loadTasks() {
+            fetch(api).then((response) => response.json())
+                .then((data) => {
+                    const list = document.querySelector("#taskList");
+                    list.innerHTML = "";
+
+                    data.forEach(task => {
+                        let li = document.createElement("li");
+                        li.innerHTML = `
+                    
+                        <input type="checkbox"
+                         name="checkbox" 
+                         id="task${task.id}"  
+                         ${(task.completed) ? "checked" : ""}
+                         onchange=toggleTask(${task.id},this.checked)>
+
+                        
+                        <label for="task${task.id}" style="${(task.completed) ? 'text-decoration:line-through;' : ''}">${task.text}</label>
+                        <button onclick="updateTask(${task.id},'${task.text}')">Edit</button>
+                        <button onclick="deleteTask(${task.id})">Delete</button>
+                    `
+                        list.appendChild(li)
+                    });
+                });
+        }
+
+        function addTask() {
+            let input = document.querySelector("#taskInput")
+            let text = input.value.trim();
+
+            if (!text || text === "") {
+                alert("please enter task first")
+                return;
+            }
+            fetch(api, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ text: text })
+            }).then((response) => {
+                input.value = "";
+                loadTasks();
+            }).catch(err => alert("failed to add task"))
+        }
+
+        function toggleTask(id, completed) {
+            fetch(`http://localhost:3000/update/${id}`, {
+                method: "put",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ completed })
+            }).then(() => {
+                loadTasks();
+            })
+        }
+
+        function updateTask(id, oldText) {
+            let newText = prompt("Edit Task : ", oldText);
+            newText = newText.trim();
+
+            if (!newText || newText.trim() === "") return;
+
+            if (newText === oldText) {
+                return;
+            }
+
+            fetch(`http://localhost:3000/update/${id}`, {
+                method: "put",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ text: newText })
+            }).then(() => {
+                loadTasks();
+            })
+        }
+
+        function deleteTask(id) {
+            console.log("delete called")
+            fetch(`http://localhost:3000/delete/${id}`, {
+                method: "delete",
+                headers: { "Content-Type": "application/json" }
+            }).then(() => {
+                loadTasks();
+            })
+        }
+
+    </script>
+
+</body>
+
+</html>
