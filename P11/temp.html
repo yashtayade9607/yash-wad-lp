@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Registration</h2>
+
+<input id="name" placeholder="Name"><br>
+<input id="email" placeholder="Email"><br>
+<input id="mobile" placeholder="Mobile"><br>
+<input id="dob" type="date"><br>
+<input id="city" placeholder="City"><br>
+<input id="address" placeholder="Address"><br>
+<input id="password" type="password" placeholder="Password"><br>
+
+<button onclick="register()">Register</button>
+
+<hr>
+
+<h2>Login</h2>
+
+<input id="loginUser" placeholder="Name"><br>
+<input id="loginPass" type="password" placeholder="Password"><br>
+
+<button onclick="login()">Login</button>
+
+<script>
+    function register()
+    {
+            let name=document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let mobile = document.getElementById("mobile").value;
+    let dob = document.getElementById("dob").value;
+    let city = document.getElementById("city").value;
+    let address = document.getElementById("address").value;
+    let password = document.getElementById("password").value;
+
+
+    if(name == "" || email == "" || mobile == "" || dob == "" || city == "" || address == "" || password == "")
+    {
+        alert("Please fill all fields");
+        return;
+    }
+    if(!email.includes("@"))
+    {
+        alert("Invalid email");
+        return;
+    
+    }
+
+    if(mobile.length!=10)
+    {
+        alert("Invalid mobile number");
+        return;
+    }
+
+    let req=new XMLHttpRequest();
+    req.open("POST","local");
+    req.onload=function()
+    {
+            let users=JSON.parse(localStorage.getItem("users")) || [];
+            users.push({name,mobile,city,email,dob,address,password});
+            localStorage.setItem("users",JSON.stringify(users));
+            alert("registration successfull")
+    
+    }
+    req.send();
+
+
+    
+    }
+
+    function login()
+    {
+         let username=document.getElementById("loginUser").value;
+        let password=document.getElementById("loginPass").value;
+
+        let users=JSON.parse(localStorage.getItem("users")) || [];
+        let ans=users.find(u=> u.name == username && u.password==password)
+            if(ans)
+        {
+            window.location="index.html";
+        }
+        else
+        {
+            alert("invalid credentials");
+        
+        }
+
+
+       
+    }
+
+</script>
